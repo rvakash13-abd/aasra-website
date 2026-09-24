@@ -105,12 +105,22 @@ const Hero: React.FC<HeroProps> = ({ trustBadge, headline, subtitle, buttons, cl
         )}
 
         <div className="text-center space-y-6 max-w-5xl mx-auto px-4">
-          <div className="space-y-2">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-aasra-light via-sky-300 to-white bg-clip-text text-transparent animate-fade-in-up animation-delay-200">
-              {headline.line1}
+          <div className="space-y-3">
+            <h1 className="text-5xl md:text-7xl lg:text-[6.25rem] font-black tracking-[-0.06em] leading-[0.9] animate-fade-in-up animation-delay-200">
+              <span className="bg-gradient-to-r from-white via-sky-100 to-sky-300 bg-clip-text text-transparent">
+                {headline.line1.split(" ")[0]}
+              </span>{" "}
+              <span className="bg-gradient-to-r from-aasra-light via-cyan-300 to-sky-200 bg-clip-text text-transparent">
+                {headline.line1.split(" ").slice(1).join(" ")}
+              </span>
             </h1>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-white via-sky-300 to-aasra-light bg-clip-text text-transparent animate-fade-in-up animation-delay-400">
-              {headline.line2}
+            <h1 className="text-5xl md:text-7xl lg:text-[6.25rem] font-black tracking-[-0.06em] leading-[0.9] animate-fade-in-up animation-delay-400">
+              <span className="bg-gradient-to-r from-sky-100 via-cyan-200 to-aasra-light bg-clip-text text-transparent">
+                {headline.line2.split(" ")[0]}
+              </span>{" "}
+              <span className="bg-gradient-to-r from-white via-sky-200 to-cyan-300 bg-clip-text text-transparent">
+                {headline.line2.split(" ").slice(1).join(" ")}
+              </span>
             </h1>
           </div>
 
